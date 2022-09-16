@@ -1,0 +1,50 @@
+{
+    "name": "Player",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "d1f59a1d-6456-49d1-80a7-a331b982601c",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "74514abc-9394-48d5-97f0-781c44656db8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b131ba09-fb1c-4d85-8fe2-00d5dabcd82e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyMouse",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "KeyMouse",
+            "bindingGroup": "KeyMouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
