@@ -7,6 +7,8 @@ public class LevelMovement : MonoBehaviour
 {
     public Transform _trans;
 
+    public PlayerMovement player;
+
     int tester = 0;
 
     // Start is called before the first frame update
@@ -18,19 +20,18 @@ public class LevelMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current[Key.Q].isPressed)
-        {
-
-            Debug.Log("sup");
-        }
+        //Debug.Log(tester);
     }
 
     public void spinLeft(InputAction.CallbackContext context)
     {
         if (Keyboard.current[Key.Q].isPressed)
         {
-            tester -= 90;
-            _trans.Rotate(_trans.rotation.x, _trans.rotation.y, tester);
+            if (!player.GetIsGrounded())
+            {
+                tester -= 90;
+                _trans.Rotate(_trans.rotation.x, _trans.rotation.y, tester);
+            }
         }
     }
     
@@ -38,8 +39,11 @@ public class LevelMovement : MonoBehaviour
     {
         if (Keyboard.current[Key.E].isPressed)
         {
-            tester += 90;
-            _trans.Rotate(_trans.rotation.x, _trans.rotation.y, tester);
+            if (!player.GetIsGrounded())
+            {
+                tester += 90;
+                _trans.Rotate(_trans.rotation.x, _trans.rotation.y, tester);
+            }
         }
     }
 }

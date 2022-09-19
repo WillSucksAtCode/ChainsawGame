@@ -30,13 +30,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (inputx > 0)
         {
-            _trans.rotation = Quaternion.Euler(0, 0, 0);
+            _trans.rotation = Quaternion.Euler(_trans.rotation.x, 0, 0);
         }
 
         if (inputx < 0)
         {
-            _trans.rotation = Quaternion.Euler(0, 180, 0);
+            _trans.rotation = Quaternion.Euler(_trans.rotation.x, 180, 0);
         }
+    }
+
+    public bool GetIsGrounded()
+    {
+        return isGrounded;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -55,6 +60,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 inputx = 0;
                 _rb.gravityScale = -_rb.gravityScale;
+
+                if (_rb.gravityScale == 1)
+                {
+                    _trans.rotation = Quaternion.Euler(0, _trans.rotation.y, 0);
+                }
+                else
+                {
+                    _trans.rotation = Quaternion.Euler(180, _trans.rotation.y, 0);
+                }
+
                 isGrounded = false;
             }
         }
