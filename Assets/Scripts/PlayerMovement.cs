@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D _rb;
     public Transform _trans;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
         {
             _trans.rotation = Quaternion.Euler(_trans.rotation.x, 180, 0);
         }
+        if (inputx == 0)
+        {
+            animator.SetBool("IsRunning", false);
+        }
     }
 
     public bool GetIsGrounded()
@@ -49,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             inputx = context.ReadValue<Vector2>().x;
+            animator.SetBool("IsRunning", true);
         }
     }
     
