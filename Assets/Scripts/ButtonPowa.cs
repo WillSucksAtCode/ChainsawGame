@@ -9,6 +9,7 @@ public class ButtonPowa : MonoBehaviour
 
     public void Quit()
     {
+        Debug.Log("*augh*");
         Application.Quit();
     }
 

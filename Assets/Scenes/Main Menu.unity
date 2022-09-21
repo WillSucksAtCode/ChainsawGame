@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 10964316}
+  - component: {fileID: 10964317}
   m_Layer: 0
   m_Name: LevelButtons
   m_TagString: Untagged
@@ -160,6 +161,19 @@ Transform:
   m_Father: {fileID: 840557025}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &10964317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10964315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a85773dbd61454f94cd9263099ccfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: 0
 --- !u!1 &83382064
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +186,7 @@ GameObject:
   - component: {fileID: 83382068}
   - component: {fileID: 83382067}
   - component: {fileID: 83382066}
+  - component: {fileID: 83382069}
   m_Layer: 5
   m_Name: LevelButton1
   m_TagString: Untagged
@@ -242,7 +257,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 83382067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 83382069}
+        m_TargetAssemblyTypeName: ButtonPowa, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &83382067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +308,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83382064}
   m_CullTransparentMesh: 1
+--- !u!114 &83382069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83382064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a85773dbd61454f94cd9263099ccfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: 1
 --- !u!1 &185382764
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +776,7 @@ GameObject:
   - component: {fileID: 636928031}
   - component: {fileID: 636928030}
   - component: {fileID: 636928029}
+  - component: {fileID: 636928032}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -806,7 +847,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 636928030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 636928032}
+        m_TargetAssemblyTypeName: ButtonPowa, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &636928030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +898,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636928027}
   m_CullTransparentMesh: 1
+--- !u!114 &636928032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636928027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a85773dbd61454f94cd9263099ccfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: 0
 --- !u!1 &677678712
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a85773dbd61454f94cd9263099ccfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNumber: 0
 --- !u!114 &677678715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,6 +1070,7 @@ GameObject:
   - component: {fileID: 698967308}
   - component: {fileID: 698967307}
   - component: {fileID: 698967306}
+  - component: {fileID: 698967309}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1073,7 +1141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 698967307}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 698967309}
+        m_TargetAssemblyTypeName: ButtonPowa, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &698967307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,6 +1192,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698967304}
   m_CullTransparentMesh: 1
+--- !u!114 &698967309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698967304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a85773dbd61454f94cd9263099ccfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNumber: 0
 --- !u!1 &759079105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2430,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 10964315}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2082572979
 MonoBehaviour:
